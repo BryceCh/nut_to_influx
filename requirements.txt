@@ -1,0 +1,4 @@
+nut2
+influxdb
+requests
+urllib3
