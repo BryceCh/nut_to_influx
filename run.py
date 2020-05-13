@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#Import libraries
 import socket
 import collections
 import time
@@ -106,7 +105,6 @@ class nutCollector():
         for server in self.server:
             msg = msg.replace(server, '*******')
 
-        # Remove IP addresses
         for match in re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", msg):
             msg = msg.replace(match, '***.***.***.***')
 
@@ -118,13 +116,13 @@ class nutCollector():
            ups_client = PyNUTClient(host=self.server, port=self.port, login=self.user, password=self.password)
            ups_data = ups_client.list_vars(self.upsname)
          else:
-        # TODO - Fix error TypeError: unsupported operand type(s) for %: 'bytes' when passing self.server, self.port #IMPORTANT - Python3.4 caused this error
-        # Please use at least Python3.6 
+        # Using Python 3.4 here will result in a TypeError: unsupported operand type(s) for %: 'bytes' when passing self.server, self.port 
+        # IMPORTANT - Please use at least Python3.6 
            ups_client = PyNUTClient(host=self.server, port=self.port)
            ups_data = ups_client.list_vars(self.upsname)
         
          if ups_data:
-           self.send_log('Connected successfully to NUT Server @ {}:{}'.format(self.server,self.port), "info")
+           self.send_log('Successfully connected to NUT Server', "info")
          return ups_data
 
     def convert_to_type(self, s):
@@ -240,8 +238,7 @@ class configManager():
     def _load_config_values(self):
 
         # General
-        self.delay = self.config['GENERAL'].getint('Delay', fallback=2)
-        self.librarydelay = self.config['GENERAL'].getint('LibraryDelay', fallback=1800)
+        self.delay = self.config['GENERAL'].getint('Delay', fallback=20)
         if not self.silent:
             self.output = self.config['GENERAL'].getboolean('Output', fallback=True)
         else:
