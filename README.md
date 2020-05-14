@@ -38,20 +38,20 @@ Grab the example config above, and edit to suit your environment
 ### Docker run
 
 ```
-# docker run --name influxdb_nut_exporter -v /path/to/config/config.ini:/app/config.ini:ro brycech/influxdb_nut_exporter
+ docker run --name influxdb_nut_exporter -v /path/to/config/config.ini:/app/config.ini:ro brycech/influxdb_nut_exporter
 
 ```
 ### Docker Compose
 
 ```
-# version: '2'
-# services:
-#   ups:
-#     image: brycech/influxdb_nut_exporter
-#     container_name: influxdb_nut_exporter
-#     volumes:
-#       - /path/to/config/config.ini:/app/config.ini:ro
-#     restart: always
+  version: '2'
+  services:
+    ups:
+      image: brycech/influxdb_nut_exporter
+      container_name: influxdb_nut_exporter
+      volumes:
+        - /path/to/config/config.ini:/app/config.ini:ro
+      restart: always
 ```
 ## Grafana
 
