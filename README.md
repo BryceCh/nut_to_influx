@@ -5,7 +5,7 @@ Dockerised Python script to send metrics from Network UPS Tools to Grafana
 
 Grab the example config above, and edit to suit your environment
 
-## Configuration within config.ini
+### Configuration within config.ini
 
 #### GENERAL
 |Key            |Description                                                                                                         |
