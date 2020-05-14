@@ -57,4 +57,6 @@ Grab the example config above, and edit to suit your environment
 
 Add influxdb database to Grafana and graph away
 
+[Fully compatible with this dashboard](https://grafana.com/grafana/dashboards/10914)
+
 ![](grafana.gif)
