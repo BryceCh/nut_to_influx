@@ -57,6 +57,6 @@ services:
 
 Add influx database to Grafana and graph away
 
-Metrics are [Fully compatible with this dashboard](https://grafana.com/grafana/dashboards/10914)
+Metrics are [fully compatible with this dashboard](https://grafana.com/grafana/dashboards/10914)
 
 ![](grafana.gif)
