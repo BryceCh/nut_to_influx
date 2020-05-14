@@ -25,8 +25,8 @@ Grab the example config above, and edit to suit your environment
 |Key            |Description                                                                                                         |
 |:--------------|:-------------------------------------------------------------------------------------------------------------------|
 |Server         |Host running Network UPS Tools                                                                                      |
-|UPSName        |This is the name of the UPS (configured on NUT Server                                                               |
-|Username       |User that has access monitor NUT Server                                                                             |
+|UPSName        |This is the name of the UPS (configured on NUT Server)                                                              |
+|Username       |User that has access to monitor NUT Server                                                                          |
 |Password       |Password for above user                                                                                             |
 #### LOGGING
 |Key            |Description                                                                                                         |
@@ -47,11 +47,14 @@ Grab the example config above, and edit to suit your environment
 # version: '2'
 # services:
 #   ups:
-#     image: docker.ad.brycech.com/brycech/influxdb_nut_exporter
+#     image: brycech/influxdb_nut_exporter
 #     container_name: influxdb_nut_exporter
 #     volumes:
 #       - /path/to/config/config.ini:/app/config.ini:ro
 #     restart: always
 ```
-#### Grafana
+## Grafana
 
+Add influxdb database to Grafana and graph away
+
+![](grafana.gif)
