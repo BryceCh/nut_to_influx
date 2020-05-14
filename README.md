@@ -11,7 +11,6 @@ Grab the example config above, and edit to suit your environment
 |Key            |Description                                                                                                         |
 |:--------------|:-------------------------------------------------------------------------------------------------------------------|
 |Delay          |Delay between updating metrics                                                                                      |
-|ReportCombined |When using multiple servers report total streams over all servers                                                   |
 #### INFLUXDB
 |Key            |Description                                                                                                         |
 |:--------------|:-------------------------------------------------------------------------------------------------------------------|
