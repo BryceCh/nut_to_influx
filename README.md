@@ -1,4 +1,4 @@
-# influxdb_nut_exporter
+# nut_to_influx
 Dockerised Python script to send metrics from Network UPS Tools to Grafana
 
 ## Getting started
