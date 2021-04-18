@@ -1,7 +1,7 @@
 # nut_to_influx
 Dockerised Python script to send metrics from Network UPS Tools to Grafana
 
-[![Docker Registry](https://dockeri.co/image/brycech/nightscout-docker)](https://hub.docker.com/r/brycech/nut_to_influx)
+[![Docker Registry](https://dockeri.co/image/brycech/nut_to_influx)](https://hub.docker.com/r/brycech/nut_to_influx)
 
 ## Getting started
 
